@@ -10,6 +10,9 @@ import {
 import { BaiJamjuree_700Bold } from '@expo-google-fonts/bai-jamjuree'
 
 import blurBg from  '../src/assets/bg-blur.png'
+import Stripes from '../src/assets/stripes.svg'
+import NLWLogo from '../src/assets/nlw-spacetime-logo.svg'
+
 
 export default function App() {
   const [hasLoadedFonts] = useFonts({
@@ -27,6 +30,15 @@ export default function App() {
     className="relative flex-1 items-center bg-gray-900"
     imageStyle={{ position: 'absolute', left: '-100%' }}
     >
+      <Stripes className="absolute left-2" />
+      <View className="flex-1 items-center justify-center gap-6">
+        <NLWLogo />
+        <View className="space-y-2">
+          <Text className="text-center font-title text-2xl leading-tight text-gray-50">Sua cápsula do tempo</Text>
+          <Text className="text-center font-body text-base leading-relaxed text-gray-100">Colecione momentos marcantes da sua jornada e compartilhe (se quiser) com o mundo!</Text>
+        </View>
+      </View>
+
       <StatusBar style="light" translucent />
     </ImageBackground>
   )
